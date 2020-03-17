@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @apply.name %>
+</p>
+
+<p>
+  <strong>Age:</strong>
+  <%= @apply.age %>
+</p>
+
+<p>
+  <strong>Position:</strong>
+  <%= @apply.position %>
+</p>
+
+<p>
+  <strong>Phone:</strong>
+  <%= @apply.phone %>
+</p>
+
+
+
+<p>
+  <strong>Email:</strong>
+  <%= @apply.email %>
+</p>
+
+
+
+<%= link_to 'Edit', edit_apply_path(@apply) %> |
+<%= link_to 'Back', root_url  %>
