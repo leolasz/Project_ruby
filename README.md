@@ -26,4 +26,4 @@ third commit
 - change buttons on home page
 
 
-5 - 
+5 -  authentications
