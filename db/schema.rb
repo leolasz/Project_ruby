@@ -26,12 +26,7 @@ ActiveRecord::Schema.define(version: 2020_03_17_103657) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "clubs", force: :cascade do |t|
-    t.string "name"
-    t.string "string"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
+ 
 
   create_table "create_jobs", force: :cascade do |t|
     t.string "name"
@@ -42,14 +37,7 @@ ActiveRecord::Schema.define(version: 2020_03_17_103657) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "instuitions", force: :cascade do |t|
-    t.string "name"
-    t.string "position"
-    t.string "anual_contract"
-    t.string "contract_time"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
+
 
   create_table "players", force: :cascade do |t|
     t.string "name"

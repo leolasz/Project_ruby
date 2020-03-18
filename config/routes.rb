@@ -11,7 +11,7 @@ Rails.application.routes.draw do
     get 'enter',    to: 'sessions#new'
     post 'enter',   to: 'sessions#create'
     delete 'exit',  to: 'sessions#destroy'
-    
+    resources :create_jobs
     resources :instuitions
     resources :applies
     resources :users, only: [:new, :create, :show]

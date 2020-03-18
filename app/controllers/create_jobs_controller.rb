@@ -39,15 +39,11 @@ class CreateJobsController < ApplicationController
 
   # PATCH/PUT /create_jobs/1
   # PATCH/PUT /create_jobs/1.json
-  def update
+  def destroy
+    @create_job.destroy
     respond_to do |format|
-      if @create_job.update(create_job_params)
-        format.html { redirect_to @create_job, notice: 'Create job was successfully updated.' }
-        format.json { render :show, status: :ok, location: @create_job }
-      else
-        format.html { render :edit }
-        format.json { render json: @create_job.errors, status: :unprocessable_entity }
-      end
+      format.html { redirect_to create_jobs_url, notice: 'Create job was successfully destroyed.' }
+      format.json { head :no_content }
     end
   end
 
@@ -62,13 +58,13 @@ class CreateJobsController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_create_job
-      @create_job = CreateJob.find(params[:id])
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_create_jobs
+    @create_job = CreateJob.find(params[:id])
+  end
 
-    # Only allow a list of trusted parameters through.
-    def create_job_params
-      params.require(:create_job).permit(:name, :position, :annual_salary, :contract_time)
-    end
+  # Only allow a list of trusted parameters through.
+  def create_job_params
+    params.require(:create_job).permit(:name, :position, :annual_salary, :contract_time)
+  end
 end

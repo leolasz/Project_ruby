@@ -69,6 +69,6 @@ class AppliesController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def apply_params
-      params.require(:apply).permit(:name, :age, :position, :phone, :string, :email, :image)
+      params.require(:apply).permit(:name, :age, :position, :phone, :string, :email, )
     end
 end

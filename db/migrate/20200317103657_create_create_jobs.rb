@@ -5,8 +5,7 @@ class CreateCreateJobs < ActiveRecord::Migration[5.2]
       t.string :position
       t.string :annual_salary
       t.string :contract_time 
-      t.string :email
-      t.string :phone
+     
 
 
       t.timestamps
