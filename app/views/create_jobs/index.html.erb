@@ -15,8 +15,8 @@
       <th>Contract time</th>
       <th colspan="3"></th>
      <span>  <strong> Manage</strong> </span>
-            <%= link_to 'New jobs', new_create_jobs_path(current_user), class: 'btn btn-success'%>
-            <%= link_to 'back', root_url(current_user), class: 'btn btn-success'%>
+            <%= link_to 'New jobs', new_create_job_path(current_user), :class => 'btn btn-success'%>
+            <%= link_to 'back', root_url(current_user), :class =>  'btn btn-success'%>
           </th>
         </tr> 
       </thead>
@@ -45,7 +45,7 @@
             <%= c.contract_time %>
           </td>
           <td>
-            <%= link_to 'Edit', edit_apply_path(c), class: 'btn btn-warning' %>
+            <%= link_to 'Edit', edit_apply_path(c),  :class => 'btn btn-warning' %>
           </td>
           <td>
             <%= link_to 'Destroy', apply_path(c), method: :delete, class: 'btn btn-danger', data: { confirm: 'Tem certeza que deseja excluir?' } %>
