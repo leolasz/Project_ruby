@@ -1,6 +1,6 @@
-# READ ME
+<!-- # READ ME
 
-first commit
+**********first commit
 
 1 - Creating an application
 
@@ -16,14 +16,20 @@ first commit
 - create Template Users
 
 
-second commit
+*******second commit
 
 4 -  controllers and validations 
 
-third commit 
+*********third commit 
 
 - fix validations
 - change buttons on home page
 
 
 5 -  authentications
+
+
+
+******** fourth commit
+
+- adjustment in nav log buttons -->

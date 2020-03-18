@@ -1,0 +1,2 @@
+module InstuitionsHelper
+end

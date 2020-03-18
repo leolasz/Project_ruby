@@ -1,50 +1,48 @@
 <div class="row">
   <div class="col-xs-12 text-center">
-    <h1>My applyes</h1>
+    <h1>Create jobs</h1>
     <br> <br>
   </div>
+
 
   <div class="col-md-8 col-md-offset-2 col-xs-12">
     <table class="table table-striped">
       <thead>
         <tr>
       <th>Name</th>
-      <th>Age</th>
       <th>Position</th>
-      <th>Phone</th>
-        <th>email</th>
-          <th colspan="">
-         <span>  <strong> Manage</strong> </span>
-            <%= link_to 'New Apply', new_apply_path(current_user), class: 'btn btn-success'%>
-            <%= link_to 'back', user_path(current_user), class: 'btn btn-success'%>
+      <th>Annual salary</th>
+      <th>Contract time</th>
+      <th colspan="3"></th>
+     <span>  <strong> Manage</strong> </span>
+            <%= link_to 'New jobs', new_create_jobs_path(current_user), class: 'btn btn-success'%>
+            <%= link_to 'back', root_url(current_user), class: 'btn btn-success'%>
           </th>
         </tr> 
       </thead>
-      <tbody>
-        <% if @applies.empty? %>
-          <tr>
-            <td colspan="4" class="text-center">
+
+  <tbody>
+   <% if@create_jobs.empty? %>
+      <tr>
+    <td colspan="4" class="text-center">
               <h3>No registered applications.</h3>
-              <%= link_to 'click here', new_apply_path(current_user) %> to register a new application
+              <%= link_to 'click here', create_jobs_path(current_user) %> to register a new  job application
             </td>
           </tr>
         <% end %>
-        <% @applies.each do |c| %>
-        <tr>
+ <% @create_jobs.each do |c| %>
+<tr>
           <td>
             <%= c.name %>
           </td>
           <td>
-            <%= c.age %>
-          </td>
-           <td>
             <%= c.position %>
           </td>
-          <td>
-            <%= c.phone %>
+           <td>
+            <%= c.annual_salary %>
           </td>
           <td>
-            <%= c.email %>
+            <%= c.contract_time %>
           </td>
           <td>
             <%= link_to 'Edit', edit_apply_path(c), class: 'btn btn-warning' %>
@@ -58,3 +56,5 @@
     </table>
   </div>
 </div>
+
+        

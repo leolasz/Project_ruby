@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @create_job.name %>
+</p>
+
+<p>
+  <strong>Position:</strong>
+  <%= @create_job.position %>
+</p>
+
+<p>
+  <strong>Annual salary:</strong>
+  <%= @create_job.annual_salary %>
+</p>
+
+<p>
+  <strong>Contract time:</strong>
+  <%= @create_job.contract_time %>
+</p>
+
+<%= link_to 'Edit', edit_create_job_path(@create_job) %> |
+<%= link_to 'Back', create_jobs_new_path %>

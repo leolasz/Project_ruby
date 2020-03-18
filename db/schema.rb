@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_03_16_083339) do
+ActiveRecord::Schema.define(version: 2020_03_17_103657) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -26,7 +26,48 @@ ActiveRecord::Schema.define(version: 2020_03_16_083339) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "clubs", force: :cascade do |t|
+    t.string "name"
+    t.string "string"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
+  create_table "create_jobs", force: :cascade do |t|
+    t.string "name"
+    t.string "position"
+    t.string "annual_salary"
+    t.string "contract_time"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "instuitions", force: :cascade do |t|
+    t.string "name"
+    t.string "position"
+    t.string "anual_contract"
+    t.string "contract_time"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "players", force: :cascade do |t|
+    t.string "name"
+    t.string "string"
+    t.string "position"
+    t.string "age"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "staffs", force: :cascade do |t|
+    t.string "name"
+    t.string "string"
+    t.string "position"
+    t.string "age"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
