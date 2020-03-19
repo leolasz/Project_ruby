@@ -40,3 +40,10 @@
 - working form style
 - link usert to job list
 - link create a job to new job -->
+
+<!-- 
+******** sixth commit
+
+-The relationship between the application and the user
+- relationship between creating jobs and the user
+- test web page -->

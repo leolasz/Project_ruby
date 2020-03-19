@@ -1,5 +1,5 @@
 class CreateJobsController < ApplicationController
-  before_action :set_create_job, only: [:show, :edit, :update, :destroy]
+  before_action :set_create_jobs, only: [:show, :edit, :update, :destroy]
 
   # GET /create_jobs
   # GET /create_jobs.json
@@ -16,6 +16,7 @@ class CreateJobsController < ApplicationController
   def new
     @create_job = CreateJob.new
   end
+
 
   # GET /create_jobs/1/edit
   def edit
@@ -39,13 +40,19 @@ class CreateJobsController < ApplicationController
 
   # PATCH/PUT /create_jobs/1
   # PATCH/PUT /create_jobs/1.json
-  def destroy
-    @create_job.destroy
+  def update
     respond_to do |format|
-      format.html { redirect_to create_jobs_url, notice: 'Create job was successfully destroyed.' }
-      format.json { head :no_content }
+      if  @create_job.update(create_job_params)
+        format.html { redirect_to @create_job, notice: 'job was successfully updated.' }
+        format.json { render :show, status: :ok, location: @create_job }
+      else
+        format.html { render :edit }
+        format.json { render json: @create_job.errors, status: :unprocessable_entity }
+      end
     end
   end
+  
+
 
   # DELETE /create_jobs/1
   # DELETE /create_jobs/1.json
