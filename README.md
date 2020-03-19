@@ -46,4 +46,12 @@
 
 -The relationship between the application and the user
 - relationship between creating jobs and the user
-- test web page -->
+<!-- - test web page -->
+<!-- 
+******* seventh commit
+
+- create page our history
+- create page our main players
+- fix controllers
+- fix routes
+- testing 
