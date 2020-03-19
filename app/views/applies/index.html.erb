@@ -13,13 +13,16 @@
       <th>Position</th>
       <th>Phone</th>
         <th>email</th>
-          <th colspan="">
-         <span>  <strong> Manage</strong> </span>
-            <%= link_to 'New aplly',  new_apply_path(current_user), class: 'btn btn-success'%>
+
+         <th colspan="3"></th>
+     <span>  <strong> Manage</strong> </span>
+      <%= link_to 'New aplly',  new_apply_path(current_user), class: 'btn btn-success'%>
             <%= link_to 'back', user_path(current_user), class: 'btn btn-success'%>
+            
           </th>
         </tr> 
-      </thead>
+          <th colspan="5">
+
       <tbody>
         <% if @applies.empty? %>
           <tr>
