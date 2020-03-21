@@ -39,23 +39,7 @@ ActiveRecord::Schema.define(version: 2020_03_17_103657) do
 
 
 
-  create_table "players", force: :cascade do |t|
-    t.string "name"
-    t.string "string"
-    t.string "position"
-    t.string "age"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "staffs", force: :cascade do |t|
-    t.string "name"
-    t.string "string"
-    t.string "position"
-    t.string "age"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
+  
 
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
