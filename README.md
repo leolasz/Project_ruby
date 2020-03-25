@@ -1,3 +1,5 @@
+https://immense-ridge-98996.herokuapp.com/
+
 <!-- # READ ME
 
 **********first commit
@@ -55,3 +57,6 @@
 - fix controllers
 - fix routes
 - testing 
+
+******* eighth commit
+- update validations 
